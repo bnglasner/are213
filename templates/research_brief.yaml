@@ -1,0 +1,19 @@
+research_question: ""
+primary_estimand: ""
+target_population: ""
+unit_of_observation: ""
+treatment_definition: ""
+outcome_definition: ""
+sample_construction: ""
+design_family_candidate: ""
+known_threats: []
+code_and_data_scope:
+  code_paths: []
+  data_paths: []
+  documentation_paths: []
+observed_evidence:
+  - claim: ""
+    source_file: ""
+    confidence: "high"
+inferred_points: []
+open_questions: []

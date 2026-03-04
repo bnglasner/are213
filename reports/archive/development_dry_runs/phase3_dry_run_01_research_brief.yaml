@@ -1,0 +1,38 @@
+research_question: "What is the causal effect of pretrial detention on conviction outcomes?"
+primary_estimand: "LATE of detention on conviction for compliers induced by judge leniency"
+target_population: "Defendants at the margin of detention decisions within the study jurisdiction and period"
+unit_of_observation: "Defendant-case"
+treatment_definition: "Indicator for pretrial detention before case resolution"
+outcome_definition: "Conviction indicator at case disposition"
+sample_construction: "Cases with quasi-random judge assignment and complete pretrial decision + disposition records"
+design_family_candidate: "IV/LATE"
+known_threats:
+  - "Judge assignment may not be fully random after conditioning on court process rules"
+  - "Exclusion restriction may fail if judges affect outcomes through channels other than detention"
+  - "Weak first-stage risk in subsamples with low judge-leniency variation"
+code_and_data_scope:
+  code_paths:
+    - "Unavailable in this dry run"
+  data_paths:
+    - "Unavailable in this dry run"
+  documentation_paths:
+    - "AI_READABLE/C3_judge_IV.md"
+    - "AI_READABLE/C1_IV_basics.md"
+    - "AI_READABLE/C2_LATE.md"
+observed_evidence:
+  - claim: "Judge leniency designs are framed as IV settings with assignment and exclusion assumptions."
+    source_file: "AI_READABLE/C3_judge_IV.md"
+    confidence: "high"
+  - claim: "Weak IV concerns and robust inference are central for credible IV estimation."
+    source_file: "AI_READABLE/C1_IV_basics.md"
+    confidence: "high"
+  - claim: "Complier interpretation requires monotonicity and supports LATE rather than ATE."
+    source_file: "AI_READABLE/C2_LATE.md"
+    confidence: "high"
+inferred_points:
+  - "Design plausibly identifies local effects, but policy extrapolation outside compliers is limited."
+  - "Assumption stress-testing should prioritize exclusion and first-stage heterogeneity."
+open_questions:
+  - "What exact assignment mechanism creates quasi-random judge exposure?"
+  - "How is leniency measured and normalized across judges and time?"
+  - "What covariates and fixed effects are pre-specified in first-stage and second-stage equations?"

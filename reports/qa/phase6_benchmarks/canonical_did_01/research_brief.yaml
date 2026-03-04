@@ -1,0 +1,32 @@
+research_question: "What is the effect of policy adoption on wages in a two-period DiD setup?"
+primary_estimand: "ATT in post period under parallel trends"
+target_population: "Workers in treated and control regions in sample period"
+unit_of_observation: "Worker-year"
+treatment_definition: "Region-level policy active indicator"
+outcome_definition: "Hourly wage"
+sample_construction: "Balanced worker-year panel for treated and control regions"
+design_family_candidate: "Canonical DiD"
+known_threats:
+  - "Parallel trends violations"
+  - "Potential anticipation"
+code_and_data_scope:
+  code_paths:
+    - "reports/qa/phase6_benchmarks/canonical_did_01/pseudocode.R"
+  data_paths:
+    - "Unavailable in benchmark"
+  documentation_paths:
+    - "AI_READABLE/D2_Canonical_DiD.md"
+observed_evidence:
+  - claim: "Canonical DiD relies on parallel trends and no anticipation."
+    source_file: "AI_READABLE/D2_Canonical_DiD.md"
+    confidence: "high"
+  - claim: "Event-style diagnostics are used to probe pre-trends."
+    source_file: "AI_READABLE/concepts/Event_study.md"
+    confidence: "high"
+  - claim: "Cluster-robust inference is standard in panel DiD settings."
+    source_file: "AI_READABLE/concepts/Cluster_robust_inference.md"
+    confidence: "high"
+inferred_points:
+  - "Current implementation likely under-tests key design assumptions."
+open_questions:
+  - "Are pre-period leads available for trend checks?"

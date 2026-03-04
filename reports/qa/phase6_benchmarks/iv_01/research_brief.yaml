@@ -1,0 +1,34 @@
+research_question: "What is the causal effect of training completion on annual earnings?"
+primary_estimand: "LATE of completion on earnings for compliers induced by center assignment"
+target_population: "Training applicants in observed counties and years"
+unit_of_observation: "Individual-year"
+treatment_definition: "Indicator for training completion"
+outcome_definition: "Annual earnings"
+sample_construction: "Applicants with valid assignment records and observed outcomes"
+design_family_candidate: "IV/LATE"
+known_threats:
+  - "Weak instrument risk"
+  - "Exclusion restriction violations"
+code_and_data_scope:
+  code_paths:
+    - "reports/qa/phase6_benchmarks/iv_01/pseudocode.R"
+  data_paths:
+    - "Unavailable in benchmark"
+  documentation_paths:
+    - "AI_READABLE/C1_IV_basics.md"
+    - "AI_READABLE/C2_LATE.md"
+observed_evidence:
+  - claim: "IV identification requires relevance and exclusion."
+    source_file: "AI_READABLE/C1_IV_basics.md"
+    confidence: "high"
+  - claim: "LATE interpretation is local to compliers."
+    source_file: "AI_READABLE/C2_LATE.md"
+    confidence: "high"
+  - claim: "Weak IV concerns materially affect inference."
+    source_file: "AI_READABLE/concepts/Weak_instruments.md"
+    confidence: "high"
+inferred_points:
+  - "Current implementation likely under-documents weak-IV risk."
+open_questions:
+  - "How strong is first-stage across subgroups?"
+  - "Are placebo outcomes available for exclusion checks?"

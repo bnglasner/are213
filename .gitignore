@@ -1,0 +1,5 @@
+.DS_Store
+*.Rhistory
+
+# Generated team outputs (keep folders, ignore ad hoc runtime artifacts)
+reports/runtime/

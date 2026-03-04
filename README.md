@@ -46,3 +46,12 @@ G. Models with multiplicative effects and Poisson regression
 --
 
 Materials are distributed under the [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license.
+
+## AI Agent Workflow (Team Use)
+This repository now includes a deployable AI-agent workflow for causal design review and econometric code audit.
+
+- Deployment guide: `TEAM_DEPLOYMENT_GUIDE.md`
+- Agent specs: `agents/`
+- Skill definitions: `skills/`
+- Output templates: `templates/`
+- Reports index: `reports/README.md`

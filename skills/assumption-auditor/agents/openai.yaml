@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assumption Auditor"
+  short_description: "Audit assumptions and test strategy."
+  default_prompt: "Use $assumption-auditor to audit assumptions and propose falsification checks for this design."

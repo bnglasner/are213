@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improvement Planner"
+  short_description: "Prioritize fixes by impact and effort."
+  default_prompt: "Use $improvement-planner to turn findings into a sequenced implementation roadmap."

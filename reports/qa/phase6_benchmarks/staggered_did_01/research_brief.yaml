@@ -1,0 +1,32 @@
+research_question: "What are dynamic effects of staggered policy adoption on outcome y?"
+primary_estimand: "Cohort-aware dynamic treatment effects"
+target_population: "Units in adoption and comparison cohorts"
+unit_of_observation: "Unit-year"
+treatment_definition: "Indicator for policy active by unit-year"
+outcome_definition: "Outcome y"
+sample_construction: "Panel with cohort adoption timing and controls"
+design_family_candidate: "Staggered DiD"
+known_threats:
+  - "TWFE weighting pathologies"
+  - "Insufficient event-time support"
+code_and_data_scope:
+  code_paths:
+    - "reports/qa/phase6_benchmarks/staggered_did_01/pseudocode.R"
+  data_paths:
+    - "Unavailable in benchmark"
+  documentation_paths:
+    - "AI_READABLE/D3_Staggered_adoption.md"
+observed_evidence:
+  - claim: "Staggered DiD requires heterogeneity-robust estimators."
+    source_file: "AI_READABLE/D3_Staggered_adoption.md"
+    confidence: "high"
+  - claim: "Event-time diagnostics are required for credibility."
+    source_file: "AI_READABLE/concepts/Event_study.md"
+    confidence: "high"
+  - claim: "Parallel-trends concerns remain central."
+    source_file: "AI_READABLE/concepts/Parallel_trends.md"
+    confidence: "high"
+inferred_points:
+  - "Current script likely over-relies on naive TWFE."
+open_questions:
+  - "Is event support adequate for all cohorts?"

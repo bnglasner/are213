@@ -1,0 +1,33 @@
+research_question: "What is the local effect of scholarship eligibility on enrollment at the cutoff?"
+primary_estimand: "Local average treatment effect at score threshold"
+target_population: "Applicants near the score cutoff"
+unit_of_observation: "Applicant"
+treatment_definition: "Eligibility indicator at cutoff"
+outcome_definition: "Enrollment indicator"
+sample_construction: "Applicants with valid score and enrollment records"
+design_family_candidate: "RDD"
+known_threats:
+  - "Sorting/manipulation at cutoff"
+  - "Functional-form sensitivity"
+code_and_data_scope:
+  code_paths:
+    - "reports/qa/phase6_benchmarks/rdd_01/pseudocode.R"
+  data_paths:
+    - "Unavailable in benchmark"
+  documentation_paths:
+    - "AI_READABLE/E1_RDD_basics.md"
+    - "AI_READABLE/E2_RDD_extensions.md"
+observed_evidence:
+  - claim: "RDD credibility requires continuity and manipulation checks."
+    source_file: "AI_READABLE/E1_RDD_basics.md"
+    confidence: "high"
+  - claim: "Bandwidth/local specification sensitivity is required."
+    source_file: "AI_READABLE/E2_RDD_extensions.md"
+    confidence: "high"
+  - claim: "RDD is local to the cutoff neighborhood."
+    source_file: "AI_READABLE/concepts/Regression_discontinuity.md"
+    confidence: "high"
+inferred_points:
+  - "Current script likely too global and under-diagnosed."
+open_questions:
+  - "Are manipulation and density tests available?"

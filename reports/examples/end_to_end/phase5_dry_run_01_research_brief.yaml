@@ -1,0 +1,38 @@
+research_question: "What is the causal effect of staggered policy adoption on firm employment?"
+primary_estimand: "Average dynamic treatment effects relative to pre-adoption periods"
+target_population: "Firms in adopting and comparison regions within the analysis window"
+unit_of_observation: "Region-year firm employment panel observation"
+treatment_definition: "Indicator for policy active status by region-year, with staggered first adoption dates"
+outcome_definition: "Firm employment level or log employment at yearly frequency"
+sample_construction: "Panel of observed firms/regions with treatment timing, outcomes, and baseline controls; includes never-treated and not-yet-treated units"
+design_family_candidate: "Staggered DiD"
+known_threats:
+  - "Pre-trend differences across early and late adopters"
+  - "Estimator bias from naive TWFE under heterogeneous treatment effects"
+  - "Inference sensitivity to clustering/dependence structure"
+code_and_data_scope:
+  code_paths:
+    - "reports/archive/development_dry_runs/phase4_dry_run_01_pseudocode.R"
+  data_paths:
+    - "Unavailable in dry run"
+  documentation_paths:
+    - "AI_READABLE/D2_Canonical_DiD.md"
+    - "AI_READABLE/D3_Staggered_adoption.md"
+    - "AI_READABLE/D4_DiD_extensions.md"
+observed_evidence:
+  - claim: "Staggered adoption requires heterogeneity-robust estimators beyond naive TWFE."
+    source_file: "AI_READABLE/D3_Staggered_adoption.md"
+    confidence: "high"
+  - claim: "Pre-trend/event-study diagnostics are central to DiD credibility."
+    source_file: "AI_READABLE/D2_Canonical_DiD.md"
+    confidence: "high"
+  - claim: "Extensions stress anticipation, spillovers, and design-specific failure modes."
+    source_file: "AI_READABLE/D4_DiD_extensions.md"
+    confidence: "high"
+inferred_points:
+  - "Current pseudo-code likely under-tests identifying assumptions."
+  - "Code audit should prioritize estimator choice and inference robustness."
+open_questions:
+  - "What is the preferred heterogeneity-robust estimator for this project?"
+  - "Which clustering level best matches policy assignment and shock correlation?"
+  - "Are there documented anticipation channels before policy activation?"

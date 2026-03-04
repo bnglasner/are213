@@ -1,0 +1,4 @@
+interface:
+  display_name: "Causal Intake"
+  short_description: "Build a structured causal study brief."
+  default_prompt: "Use $causal-intake to produce reports/research_brief.yaml from this project's files."

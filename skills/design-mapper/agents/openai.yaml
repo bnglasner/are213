@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Mapper"
+  short_description: "Map projects to causal design families."
+  default_prompt: "Use $design-mapper to map the current research brief to method families and diagnostics."

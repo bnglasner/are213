@@ -1,0 +1,4 @@
+interface:
+  display_name: "Econ Code Review"
+  short_description: "Run code-level econometric diagnostics."
+  default_prompt: "Use $econ-code-review to audit estimator alignment, inference choices, and robustness coverage."

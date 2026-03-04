@@ -1,0 +1,32 @@
+research_question: "What is the treatment effect on y when spillovers across neighbors may exist?"
+primary_estimand: "Direct effect under specified exposure mapping"
+target_population: "Households in connected villages"
+unit_of_observation: "Household-year"
+treatment_definition: "Own treatment indicator plus neighborhood exposure share"
+outcome_definition: "Outcome y"
+sample_construction: "Connected household panel with treatment and network attributes"
+design_family_candidate: "Spillovers/Exposure"
+known_threats:
+  - "Exposure mapping mis-specification"
+  - "Interference violating no-spillover assumptions"
+code_and_data_scope:
+  code_paths:
+    - "reports/qa/phase6_benchmarks/spillovers_01/pseudocode.R"
+  data_paths:
+    - "Unavailable in benchmark"
+  documentation_paths:
+    - "AI_READABLE/F_Spillovers_Formula_IV.md"
+observed_evidence:
+  - claim: "Interference requires explicit exposure mapping and diagnostics."
+    source_file: "AI_READABLE/F_Spillovers_Formula_IV.md"
+    confidence: "high"
+  - claim: "No-interference assumptions are often violated in network settings."
+    source_file: "AI_READABLE/concepts/Interference_and_spillovers.md"
+    confidence: "high"
+  - claim: "Dependence-robust inference matters with correlated exposures."
+    source_file: "AI_READABLE/concepts/Cluster_robust_inference.md"
+    confidence: "high"
+inferred_points:
+  - "Current code likely treats spillovers as absent."
+open_questions:
+  - "Which exposure mapping is substantively justified?"
