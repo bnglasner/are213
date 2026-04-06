@@ -1,0 +1,17 @@
+pdf,output,status,returncode,pdf_pages,lines,chars,pipe_lines,pipe_ratio,cid_tokens,headings,bullets,severity,quality_score
+A1_regression.pdf,A1_regression.md,ok,0,64,1179,59920,553,0.496,141,4,0,HIGH,25.4
+A2_causality.pdf,A2_causality.md,ok,0,47,884,49067,464,0.554,84,0,0,HIGH,18.0
+B_covariate_adjustment.pdf,B_covariate_adjustment.md,ok,0,31,555,31636,313,0.596,38,0,0,HIGH,41.0
+C1_IV_basics.pdf,C1_IV_basics.md,ok,0,65,1054,50750,511,0.516,0,0,0,HIGH,60.0
+C2_LATE.pdf,C2_LATE.md,ok,0,41,719,42065,403,0.594,2,0,0,HIGH,59.0
+C3_judge_IV.pdf,C3_judge_IV.md,ok,0,10,172,8295,80,0.491,0,0,0,HIGH,60.9
+D1_Panels.pdf,D1_Panels.md,ok,0,39,641,37127,342,0.567,0,0,0,HIGH,60.0
+D2_Canonical_DiD.pdf,D2_Canonical_DiD.md,ok,0,34,415,22219,208,0.545,6,2,0,HIGH,67.0
+D3_Staggered_adoption.pdf,D3_Staggered_adoption.md,ok,0,50,873,44808,441,0.535,0,0,0,HIGH,60.0
+D4_DiD_extensions.pdf,D4_DiD_extensions.md,ok,0,36,547,28385,293,0.572,0,0,0,HIGH,60.0
+D5_Factor_models.pdf,D5_Factor_models.md,ok,0,31,515,25289,248,0.511,2,0,0,HIGH,59.0
+E1_RDD_basics.pdf,E1_RDD_basics.md,ok,0,43,546,25979,260,0.516,0,0,0,HIGH,60.0
+E2_RDD_extensions.pdf,E2_RDD_extensions.md,ok,0,36,612,32320,333,0.577,0,0,0,HIGH,60.0
+F_Spillovers_Formula_IV.pdf,F_Spillovers_Formula_IV.md,ok,0,68,1163,65989,628,0.573,0,0,0,HIGH,60.0
+G_nonlinear.pdf,G_nonlinear.md,ok,0,20,355,20437,203,0.604,14,0,0,HIGH,53.0
+_Syllabus ARE213_2025.pdf,00_syllabus.md,ok,0,5,255,9408,0,0.0,0,0,0,LOW,90.0

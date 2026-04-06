@@ -1,0 +1,17 @@
+output,old_score,new_score,delta_score,old_pipe_ratio,new_pipe_ratio,delta_pipe_ratio,old_cid_tokens,new_cid_tokens,delta_cid_tokens,old_lines,new_lines,delta_lines,old_severity,new_severity
+00_syllabus.md,90.0,90.0,0.0,0.0,0.0,0.0,0,0,0,255,240,-15,LOW,LOW
+A1_regression.md,25.4,100.0,74.6,0.496,0.0,-0.496,141,0,-141,1179,945,-234,HIGH,LOW
+A2_causality.md,18.0,90.0,72.0,0.554,0.0,-0.554,84,0,-84,884,679,-205,HIGH,LOW
+B_covariate_adjustment.md,41.0,90.0,49.0,0.596,0.0,-0.596,38,0,-38,555,451,-104,HIGH,LOW
+C1_IV_basics.md,60.0,90.0,30.0,0.516,0.0,-0.516,0,0,0,1054,818,-236,HIGH,LOW
+C2_LATE.md,59.0,90.0,31.0,0.594,0.0,-0.594,2,0,-2,719,555,-164,HIGH,LOW
+C3_judge_IV.md,60.9,90.0,29.1,0.491,0.0,-0.491,0,0,0,172,133,-39,HIGH,LOW
+D1_Panels.md,60.0,90.0,30.0,0.567,0.0,-0.567,0,0,0,641,499,-142,HIGH,LOW
+D2_Canonical_DiD.md,67.0,100.0,33.0,0.545,0.0,-0.545,6,0,-6,415,316,-99,HIGH,LOW
+D3_Staggered_adoption.md,60.0,90.0,30.0,0.535,0.0,-0.535,0,0,0,873,694,-179,HIGH,LOW
+D4_DiD_extensions.md,60.0,90.0,30.0,0.572,0.0,-0.572,0,0,0,547,409,-138,HIGH,LOW
+D5_Factor_models.md,59.0,90.0,31.0,0.511,0.0,-0.511,2,0,-2,515,400,-115,HIGH,LOW
+E1_RDD_basics.md,60.0,90.0,30.0,0.516,0.0,-0.516,0,0,0,546,412,-134,HIGH,LOW
+E2_RDD_extensions.md,60.0,100.0,40.0,0.577,0.0,-0.577,0,0,0,612,461,-151,HIGH,LOW
+F_Spillovers_Formula_IV.md,60.0,90.0,30.0,0.573,0.0,-0.573,0,0,0,1163,891,-272,HIGH,LOW
+G_nonlinear.md,53.0,90.0,37.0,0.604,0.004,-0.6,14,0,-14,355,275,-80,HIGH,LOW

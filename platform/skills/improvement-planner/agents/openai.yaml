@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improvement Planner"
+  short_description: "Prioritize fixes by impact and effort."
+  default_prompt: "Use $improvement-planner on <run_dir>/method_memo.md and <run_dir>/audit_report.md, then produce <run_dir>/improvement_plan.md."

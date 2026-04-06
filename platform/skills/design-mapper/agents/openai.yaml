@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Mapper"
+  short_description: "Map projects to causal design families."
+  default_prompt: "Use $design-mapper to map <run_dir>/research_brief.yaml to method families and produce <run_dir>/method_memo.md."

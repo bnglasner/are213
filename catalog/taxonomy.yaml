@@ -1,0 +1,71 @@
+version: 1
+updated_on: 2026-03-23
+
+tag_domains:
+  method_family:
+    - general
+    - regression
+    - causality
+    - rct
+    - selection_on_observables
+    - matching
+    - weighting
+    - aipw
+    - iv
+    - late
+    - judge_designs
+    - panel_fe
+    - did
+    - event_study
+    - staggered_did
+    - synthetic_control
+    - factor_models
+    - rdd
+    - fuzzy_rdd
+    - spatial_rdd
+    - spillovers
+    - shift_share_iv
+    - formula_iv
+    - nonlinear
+    - ppml
+    - time_series
+    - forecasting
+    - machine_learning
+
+  inference:
+    - cluster_robust
+    - multiway_clustering
+    - spatial_hac
+    - randomization_inference
+    - bootstrap
+    - weak_iv_robust
+
+  data_structure:
+    - cross_section
+    - panel
+    - repeated_cross_section
+    - network
+    - spatial
+    - event_level
+
+  domain_application:
+    - methodology
+    - labor
+    - trade
+    - public_finance
+    - health
+    - education
+    - urban
+    - environment
+    - development
+    - macro
+
+  lifecycle:
+    - canonical
+    - draft
+    - archived
+
+naming_rules:
+  id_format: "snake_case"
+  tags_format: "snake_case"
+  recommended_id_pattern: "<topic>_<year> or <module>_<topic>"

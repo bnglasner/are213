@@ -1,20 +1,21 @@
 # Team Deployment Guide
 
 ## Purpose
-This repository now includes an AI-agent workflow for causal inference and econometric QA.
+This repository includes an AI-agent workflow for causal inference and econometric QA, with run-scoped outputs for reproducibility.
 
 ## Operational Surface
-- Agents: `agents/`
-- Skills: `skills/`
-- Output templates: `templates/`
-- Output location for active runs: `reports/runtime/` (recommended)
-- End-to-end example run: `reports/examples/end_to_end/`
-- Benchmark QA suite: `reports/qa/phase6_benchmarks/`
+- Agents: `platform/agents/`
+- Skills: `platform/skills/`
+- Output templates: `platform/templates/`
+- Output location for active runs: `runs/runtime/` (recommended)
+- End-to-end example run: `runs/examples/end_to_end/`
+- Benchmark QA suite: `runs/qa/phase6_benchmarks/`
 
 ## Recommended Team Workflow
 1. Create run folder:
 ```bash
-mkdir -p reports/runtime/<run_id>
+RUN_DIR="runs/runtime/<run_id>"
+mkdir -p "$RUN_DIR"
 ```
 2. Produce stage outputs in this order:
 - `research_brief.yaml`
@@ -24,19 +25,29 @@ mkdir -p reports/runtime/<run_id>
 - `improvement_plan.md`
 3. Run stage gates:
 ```bash
-./agents/stage_gate_checks.sh \
-  reports/runtime/<run_id>/research_brief.yaml \
-  reports/runtime/<run_id>/method_memo.md \
-  reports/runtime/<run_id>/audit_report.md \
-  reports/runtime/<run_id>/improvement_plan.md
+./platform/agents/stage_gate_checks.sh "$RUN_DIR"
 ```
 4. If any gate fails, remediate upstream stage before proceeding.
 
+## Compatibility Modes
+`platform/agents/stage_gate_checks.sh` supports three invocation styles:
+1. Run-dir mode: `./platform/agents/stage_gate_checks.sh runs/runtime/<run_id>`
+2. Environment mode: `RUN_DIR=runs/runtime/<run_id> ./platform/agents/stage_gate_checks.sh`
+3. Legacy explicit files:
+```bash
+./platform/agents/stage_gate_checks.sh \
+  reports/research_brief.yaml \
+  reports/method_memo.md \
+  reports/audit_report.md \
+  reports/improvement_plan.md
+```
+
 ## Key Files
-- Orchestration spec: `agents/orchestrator-agent.md`
-- Stage-gate checker: `agents/stage_gate_checks.sh`
-- Planning/status tracker: `AI_READABLE/CAUSAL_AGENT_IMPLEMENTATION_PLAN.md`
+- Orchestration spec: `platform/agents/orchestrator-agent.md`
+- Stage-gate checker: `platform/agents/stage_gate_checks.sh`
+- Planning/status tracker: `literature/canonical_ai_readable/CAUSAL_AGENT_IMPLEMENTATION_PLAN.md`
 
 ## Notes
-- Development dry runs are archived under `reports/archive/development_dry_runs/`.
-- Validation scorecards and benchmark cases are under `reports/qa/phase6_benchmarks/`.
+- Legacy path compatibility is preserved through symlinks (`reports/` -> `runs/`, `agents` -> `platform/agents/`, etc.).
+- Development dry runs are archived under `runs/archive/development_dry_runs/`.
+- Validation scorecards and benchmark cases are under `runs/qa/phase6_benchmarks/`.

@@ -1,0 +1,253 @@
+version: 1
+updated_on: 2026-03-23
+canonical_machine_readable_root: literature/canonical_ai_readable
+taxonomy_file: catalog/taxonomy.yaml
+defaults:
+  lifecycle_tag: canonical
+entries:
+  - id: syllabus_00
+    title: Syllabus ARE213 2025
+    source_pdf: literature/raw_pdf/_Syllabus ARE213_2025.pdf
+    canonical_markdown: literature/canonical_ai_readable/00_syllabus.md
+    family_tags: [general]
+    inference_tags: []
+    domain_tags: [methodology]
+
+  - id: a1_regression
+    title: Key Facts About Regression
+    source_pdf: literature/raw_pdf/A1_regression.pdf
+    canonical_markdown: literature/canonical_ai_readable/A1_regression.md
+    family_tags: [general, regression]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: a2_causality
+    title: Potential Outcomes and RCTs
+    source_pdf: literature/raw_pdf/A2_causality.pdf
+    canonical_markdown: literature/canonical_ai_readable/A2_causality.md
+    family_tags: [general, causality, rct]
+    inference_tags: [randomization_inference]
+    domain_tags: [methodology]
+
+  - id: b_covariate_adjustment
+    title: Selection on Observables and Covariate Adjustment
+    source_pdf: literature/raw_pdf/B_covariate_adjustment.pdf
+    canonical_markdown: literature/canonical_ai_readable/B_covariate_adjustment.md
+    family_tags: [selection_on_observables, aipw]
+    inference_tags: [bootstrap]
+    domain_tags: [methodology]
+
+  - id: c1_iv_basics
+    title: IV Basics
+    source_pdf: literature/raw_pdf/C1_IV_basics.pdf
+    canonical_markdown: literature/canonical_ai_readable/C1_IV_basics.md
+    family_tags: [iv]
+    inference_tags: [weak_iv_robust]
+    domain_tags: [methodology]
+
+  - id: c2_late
+    title: LATE
+    source_pdf: literature/raw_pdf/C2_LATE.pdf
+    canonical_markdown: literature/canonical_ai_readable/C2_LATE.md
+    family_tags: [iv, late]
+    inference_tags: [weak_iv_robust]
+    domain_tags: [methodology]
+
+  - id: c3_judge_iv
+    title: Judge IV Designs
+    source_pdf: literature/raw_pdf/C3_judge_IV.pdf
+    canonical_markdown: literature/canonical_ai_readable/C3_judge_IV.md
+    family_tags: [iv, judge_designs]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: d1_panels
+    title: Linear Panel Data Methods
+    source_pdf: literature/raw_pdf/D1_Panels.pdf
+    canonical_markdown: literature/canonical_ai_readable/D1_Panels.md
+    family_tags: [panel_fe]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: d2_canonical_did
+    title: Canonical DiD and Event Studies
+    source_pdf: literature/raw_pdf/D2_Canonical_DiD.pdf
+    canonical_markdown: literature/canonical_ai_readable/D2_Canonical_DiD.md
+    family_tags: [did, event_study]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: d3_staggered_did
+    title: Staggered Adoption DiD
+    source_pdf: literature/raw_pdf/D3_Staggered_adoption.pdf
+    canonical_markdown: literature/canonical_ai_readable/D3_Staggered_adoption.md
+    family_tags: [staggered_did]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: d4_did_extensions
+    title: DiD Extensions
+    source_pdf: literature/raw_pdf/D4_DiD_extensions.pdf
+    canonical_markdown: literature/canonical_ai_readable/D4_DiD_extensions.md
+    family_tags: [did, event_study]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: d5_factor_models
+    title: Factor Models and Synthetic Controls
+    source_pdf: literature/raw_pdf/D5_Factor_models.pdf
+    canonical_markdown: literature/canonical_ai_readable/D5_Factor_models.md
+    family_tags: [factor_models, synthetic_control]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+
+  - id: e1_rdd_basics
+    title: RDD Basics
+    source_pdf: literature/raw_pdf/E1_RDD_basics.pdf
+    canonical_markdown: literature/canonical_ai_readable/E1_RDD_basics.md
+    family_tags: [rdd]
+    inference_tags: [bootstrap]
+    domain_tags: [methodology]
+
+  - id: e2_rdd_extensions
+    title: RDD Extensions
+    source_pdf: literature/raw_pdf/E2_RDD_extensions.pdf
+    canonical_markdown: literature/canonical_ai_readable/E2_RDD_extensions.md
+    family_tags: [rdd, fuzzy_rdd]
+    inference_tags: [bootstrap, spatial_hac]
+    domain_tags: [methodology]
+
+  - id: f_spillovers
+    title: Spillovers, Shift-Share, and Formula IV
+    source_pdf: literature/raw_pdf/F_Spillovers_Formula_IV.pdf
+    canonical_markdown: literature/canonical_ai_readable/F_Spillovers_Formula_IV.md
+    family_tags: [spillovers, shift_share_iv, formula_iv]
+    inference_tags: [cluster_robust, spatial_hac]
+    domain_tags: [methodology]
+
+  - id: g_nonlinear
+    title: Nonlinear and PPML
+    source_pdf: literature/raw_pdf/G_nonlinear.pdf
+    canonical_markdown: literature/canonical_ai_readable/G_nonlinear.md
+    family_tags: [nonlinear, ppml]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+  - id: iter_preface
+    title: "Preface"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_preface.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_preface.md
+    family_tags: [general]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch01_introduction
+    title: "Introduction"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch01_introduction.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch01_introduction.md
+    family_tags: [general]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch02_probability_theory
+    title: "Probability Theory"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch02_probability_theory.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch02_probability_theory.md
+    family_tags: [general]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch03_a_review_of_statistics_using_r
+    title: "A Review of Statistics using R"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch03_a_review_of_statistics_using_r.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch03_a_review_of_statistics_using_r.md
+    family_tags: [general]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch04_linear_regression_with_one_regressor
+    title: "Linear Regression with One Regressor"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch04_linear_regression_with_one_regressor.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch04_linear_regression_with_one_regressor.md
+    family_tags: [regression]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch05_hypothesis_tests_and_confidence_interval
+    title: "Hypothesis Tests and Confidence Intervals in the Simple Linear Regression Model"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch05_hypothesis_tests_and_confidence_interval.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch05_hypothesis_tests_and_confidence_interval.md
+    family_tags: [regression]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+  - id: iter_ch06_regression_models_with_multiple_regresso
+    title: "Regression Models with Multiple Regressors"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch06_regression_models_with_multiple_regresso.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch06_regression_models_with_multiple_regresso.md
+    family_tags: [regression]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch07_hypothesis_tests_and_confidence_interval
+    title: "Hypothesis Tests and Confidence Intervals in Multiple Regression"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch07_hypothesis_tests_and_confidence_interval.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch07_hypothesis_tests_and_confidence_interval.md
+    family_tags: [regression]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+  - id: iter_ch08_nonlinear_regression_functions
+    title: "Nonlinear Regression Functions"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch08_nonlinear_regression_functions.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch08_nonlinear_regression_functions.md
+    family_tags: [nonlinear]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch09_assessing_studies_based_on_multiple_regr
+    title: "Assessing Studies Based on Multiple Regression"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch09_assessing_studies_based_on_multiple_regr.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch09_assessing_studies_based_on_multiple_regr.md
+    family_tags: [regression]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch10_regression_with_panel_data
+    title: "Regression with Panel Data"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch10_regression_with_panel_data.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch10_regression_with_panel_data.md
+    family_tags: [panel_fe]
+    inference_tags: [cluster_robust]
+    domain_tags: [methodology]
+  - id: iter_ch11_regression_with_a_binary_dependent_varia
+    title: "Regression with a Binary Dependent Variable"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch11_regression_with_a_binary_dependent_varia.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch11_regression_with_a_binary_dependent_varia.md
+    family_tags: [nonlinear]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch12_instrumental_variables_regression
+    title: "Instrumental Variables Regression"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch12_instrumental_variables_regression.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch12_instrumental_variables_regression.md
+    family_tags: [iv]
+    inference_tags: [weak_iv_robust]
+    domain_tags: [methodology]
+  - id: iter_ch13_experiments_and_quasi_experiments
+    title: "Experiments and Quasi-Experiments"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch13_experiments_and_quasi_experiments.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch13_experiments_and_quasi_experiments.md
+    family_tags: [causality, rct]
+    inference_tags: [randomization_inference]
+    domain_tags: [methodology]
+  - id: iter_ch14_introduction_to_time_series_regression_a
+    title: "Introduction to Time Series Regression and Forecasting"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch14_introduction_to_time_series_regression_a.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch14_introduction_to_time_series_regression_a.md
+    family_tags: [time_series, forecasting]
+    inference_tags: []
+    domain_tags: [methodology]
+  - id: iter_ch15_estimation_of_dynamic_causal_effects
+    title: "Estimation of Dynamic Causal Effects"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch15_estimation_of_dynamic_causal_effects.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch15_estimation_of_dynamic_causal_effects.md
+    family_tags: [time_series, causality]
+    inference_tags: [spatial_hac]
+    domain_tags: [methodology]
+  - id: iter_ch16_additional_topics_in_time_series_regress
+    title: "Additional Topics in Time Series Regression"
+    source_pdf: literature/raw_pdf/inbox/iter/iter_ch16_additional_topics_in_time_series_regress.pdf
+    canonical_markdown: literature/canonical_ai_readable/external/iter/iter_ch16_additional_topics_in_time_series_regress.md
+    family_tags: [time_series, forecasting]
+    inference_tags: [spatial_hac]
+    domain_tags: [methodology]

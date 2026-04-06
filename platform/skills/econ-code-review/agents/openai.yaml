@@ -1,0 +1,4 @@
+interface:
+  display_name: "Econ Code Review"
+  short_description: "Run code-level econometric diagnostics."
+  default_prompt: "Use $econ-code-review on <run_dir>/research_brief.yaml and <run_dir>/method_memo.md, then produce <run_dir>/audit_report.md."

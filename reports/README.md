@@ -1,18 +1,13 @@
-# Reports Directory
+# Reports Compatibility Shim
 
-## Structure
-- `reports/examples/end_to_end/`
-  - Reference end-to-end run artifacts for onboarding.
-- `reports/qa/phase6_benchmarks/`
-  - Benchmark validation suite and scorecards.
-- `reports/archive/development_dry_runs/`
-  - Historical build-phase dry runs kept for traceability.
-- `reports/runtime/`
-  - Recommended location for active team runs.
+`reports/` is now a compatibility path. Canonical run artifacts live under `runs/`.
 
-## Runtime Convention
-Create one subfolder per run:
-```bash
-mkdir -p reports/runtime/<run_id>
-```
-Store all stage outputs in that folder and validate with `agents/stage_gate_checks.sh`.
+## Canonical Paths
+- `runs/runtime/`
+- `runs/examples/`
+- `runs/qa/`
+- `runs/archive/`
+
+## Notes
+- Existing workflows that still read/write `reports/...` continue to work through symlinks.
+- New workflows should use `runs/...` paths directly.

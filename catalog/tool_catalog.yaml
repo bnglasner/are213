@@ -1,0 +1,94 @@
+version: 1
+updated_on: 2026-03-23
+agents:
+  - id: research-intake-agent
+    path: platform/agents/research-intake-agent.md
+    output: <run_dir>/research_brief.yaml
+  - id: method-assessment-agent
+    path: platform/agents/method-assessment-agent.md
+    output: <run_dir>/method_memo.md
+  - id: econometric-code-audit-agent
+    path: platform/agents/econometric-code-audit-agent.md
+    output: <run_dir>/audit_report.md
+  - id: orchestrator-agent
+    path: platform/agents/orchestrator-agent.md
+    output: <run_dir>/orchestrated_run
+
+skills:
+  - id: causal-intake
+    path: platform/skills/causal-intake/SKILL.md
+    output: <run_dir>/research_brief.yaml
+    tags: [intake, causal]
+  - id: design-mapper
+    path: platform/skills/design-mapper/SKILL.md
+    output: <run_dir>/method_memo.md
+    tags: [design_selection, assumptions]
+  - id: assumption-auditor
+    path: platform/skills/assumption-auditor/SKILL.md
+    output: <run_dir>/assumption_audit.md
+    tags: [assumptions, falsification]
+  - id: econ-code-review
+    path: platform/skills/econ-code-review/SKILL.md
+    output: <run_dir>/audit_report.md
+    tags: [code_review, inference, diagnostics]
+  - id: improvement-planner
+    path: platform/skills/improvement-planner/SKILL.md
+    output: <run_dir>/improvement_plan.md
+    tags: [prioritization, implementation]
+
+templates:
+  - path: platform/templates/research_brief.yaml
+  - path: platform/templates/method_memo.md
+  - path: platform/templates/assumption_audit.md
+  - path: platform/templates/audit_report.md
+  - path: platform/templates/improvement_plan.md
+
+scripts:
+  - path: platform/agents/stage_gate_checks.sh
+    role: validate staged outputs
+  - path: platform/scripts/cleanup_markitdown.py
+    role: cleanup derived markdown output
+  - path: platform/scripts/check_internal_refs.sh
+    role: validate local path references in operational docs
+  - path: platform/scripts/validate_literature_catalog.sh
+    role: validate literature catalog integrity and canonical paths
+  - path: platform/scripts/validate_external_repo_catalog.sh
+    role: validate external repo catalog contract and cross-file consistency
+  - path: platform/scripts/check_external_repo_catalog_freshness.sh
+    role: check whether external repo catalog updated_on is within freshness threshold
+  - path: platform/scripts/render_external_repo_tool_nodes.sh
+    role: regenerate per-repository external tool-node pages and index from external catalog
+  - path: platform/scripts/build_external_repo_metadata_backlog.sh
+    role: derive prioritized metadata-gap backlog from literal unspecified fields in external catalog
+  - path: platform/scripts/create_external_metadata_review_packets.sh
+    role: create run-scoped review packets for backlog entries and mark them in_review
+  - path: platform/scripts/apply_external_metadata_packets.sh
+    role: apply approved review packets to external catalog and synchronize backlog status fields
+  - path: platform/scripts/register_literature_entry.sh
+    role: append validated entries to the literature catalog
+  - path: platform/scripts/intake_material.sh
+    role: ingest new source materials into canonical paths and register metadata
+  - path: platform/scripts/list_taxonomy_tags.sh
+    role: list available taxonomy tags by domain
+  - path: platform/scripts/promote_material.sh
+    role: promote staged materials (inbox/external) into curated/core and update catalog paths
+  - path: platform/scripts/import_iter_bookdown.py
+    role: import the ITER bookdown preface/chapters into derived snapshots, canonical markdown, and catalog entries
+
+registries:
+  - path: catalog/literature_catalog.yaml
+    role: inventory of canonical literature assets
+  - path: catalog/external_repo_catalog.yaml
+    role: structured inventory of external academic econometrics repositories sourced from deep-research-report.md
+  - path: catalog/external_repo_catalog_contract.yaml
+    role: machine-readable contract for external repo catalog fields and validation rules
+  - path: catalog/external_repo_metadata_backlog.yaml
+    role: prioritized metadata-gap backlog for follow-up enrichment of external repo entries
+  - path: catalog/taxonomy.yaml
+    role: controlled vocabulary for literature tagging
+  - path: literature/canonical_ai_readable/external/academic_econ_repo_catalog.md
+    role: human-readable companion for external academic econometrics repository catalog
+  - path: literature/canonical_ai_readable/external/repo_tool_nodes.md
+    role: index of per-repository external tool-node pages
+  - path: platform/skills/design-mapper/references/repo-tool-routing.md
+    role: routing reference from estimands assumptions and data structure to external repository tool nodes

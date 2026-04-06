@@ -1,0 +1,76 @@
+version: 1
+updated_on: 2026-03-23
+target_catalog: catalog/external_repo_catalog.yaml
+data_contract_doc: docs/EXTERNAL_REPO_CATALOG_CONTRACT.md
+
+top_level_required_fields:
+  - version
+  - updated_on
+  - source_report
+  - data_contract
+  - methodology
+  - analytics
+  - provenance
+  - entries
+
+methodology_required_fields:
+  - inclusion_criteria
+  - exclusion_criteria
+  - limitations
+
+analytics_required_fields:
+  - subfield_taxonomy_used
+  - subfield_counts_reported
+  - recency_buckets
+  - internal_inconsistencies
+  - reconciliation_status
+
+reconciliation_required_fields:
+  - status
+  - report_declared_shortlist_n
+  - report_bar_chart_total
+  - report_summary_table_count
+  - report_detailed_heading_count
+  - canonical_catalog_entry_count
+  - canonical_catalog_coverage_note
+  - resolution_policy
+  - next_action
+
+entry_required_fields:
+  - id
+  - repo_slug
+  - repo_url
+  - owner_name
+  - owner_affiliation
+  - primary_scope
+  - primary_language
+  - last_update_signal
+  - stars
+  - forks
+  - watchers
+  - license
+  - recommended_priority
+  - key_files_artifacts
+  - installation_status
+  - ai_agent_use_cases
+  - metadata_completeness_note
+  - source_section
+
+allowed_recommended_priority:
+  - high
+  - medium_high
+  - medium
+  - low
+  - unspecified
+
+rules:
+  id_format: snake_case
+  repo_slug_unique: true
+  id_unique: true
+  repo_url_matches_slug: true
+  unspecified_literal: unspecified
+  canonical_count_must_match_entries_length: true
+  cross_file_checks:
+    metadata_backlog: catalog/external_repo_metadata_backlog.yaml
+    companion_doc: literature/canonical_ai_readable/external/academic_econ_repo_catalog.md
+    routing_doc: platform/skills/design-mapper/references/repo-tool-routing.md

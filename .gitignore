@@ -1,5 +1,16 @@
 .DS_Store
 *.Rhistory
+*.log
+*.tmp
 
 # Generated team outputs (keep folders, ignore ad hoc runtime artifacts)
-reports/runtime/
+reports/runtime/*
+!reports/runtime/.gitkeep
+
+# Canonical runtime path
+runs/runtime/*
+!runs/runtime/.gitkeep
+
+# Derived literature artifacts and temporary conversion outputs
+literature/derived/*
+!literature/derived/.gitkeep

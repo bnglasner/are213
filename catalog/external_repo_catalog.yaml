@@ -1,0 +1,492 @@
+version: 1
+updated_on: 2026-03-23
+source_report: deep-research-report.md
+data_contract: docs/EXTERNAL_REPO_CATALOG_CONTRACT.md
+
+methodology:
+  inclusion_criteria:
+    - public_repository
+    - substantive_econometrics_content
+    - credible_link_to_established_academic_economist_or_group
+    - non_trivial_documentation_footprint
+  exclusion_criteria:
+    - generic_econometrics_lists_without_academic_owner_linkage
+    - read_only_cran_mirrors_instead_of_development_repo
+    - ownership_or_maintainership_without_credible_academic_linkage
+  limitations:
+    - google_scholar_access_was_intermittently_blocked_so_some_owner_metrics_are_unspecified
+    - github_html_did_not_consistently_expose_commits_in_last_year_or_repo_size_without_api_access
+    - watchers_and_last_commit_fields_were_partial_for_many_repositories
+    - ecosyste_ms_was_used_as_a_supplementary_metadata_signal_when_explicitly_labeled_in_the_report
+
+analytics:
+  subfield_taxonomy_used:
+    - id: general_econometrics_toolkits
+      label: General econometrics toolkits
+      description: linear_panel_iv_estimation_frameworks
+    - id: fixed_effects_high_dimensional_estimation
+      label: Fixed effects and high-dimensional estimation
+      description: hdfe_ppml_hdfe_and_fast_fe_solvers
+    - id: did_event_study_methods
+      label: DiD and event study methods
+      description: staggered_and_dynamic_treatment_effect_estimators
+    - id: synthetic_control_and_synthetic_did
+      label: Synthetic control and synthetic DiD
+      description: synthetic_control_and_sdid_estimators
+    - id: regression_discontinuity
+      label: Regression discontinuity
+      description: rd_bandwidth_and_inference_toolchains
+    - id: ml_econometrics_for_heterogeneous_effects
+      label: ML econometrics for heterogeneous effects
+      description: causal_forests_and_generalized_random_forests
+    - id: bayesian_macroeconometrics
+      label: Bayesian macroeconometrics
+      description: bayesian_svar_and_related_macro_toolchains
+  subfield_counts_reported:
+    did_event_study_methods: 8
+    fixed_effects_high_dimensional_estimation: 5
+    synthetic_control_and_synthetic_did: 2
+    regression_discontinuity: 2
+    general_econometrics_toolkits: 2
+    ml_econometrics_for_heterogeneous_effects: 1
+    bayesian_macroeconometrics: 1
+    reported_total_from_bar_chart: 21
+  recency_buckets:
+    reference_date: 2026-03-23
+    le_30_days:
+      repos:
+        - grf-labs/grf
+        - bashtage/arch
+        - bashtage/linearmodels
+      note: reported_directly_in_timeline_bucket
+    d31_to_d180:
+      repos:
+        - bcallaway11/did
+      note: based_on_release_signal_dec_2025
+    d181_to_d365:
+      repos: []
+      note: report_states_insufficient_consistent_signals
+    gt_365_days:
+      repos:
+        - synth-inference/synthdid
+      note: report_cites_commit_history_through_jan_2024
+    unspecified:
+      repos:
+        - xuyiqing/gsynth
+        - rdpackages/rdrobust
+        - pedrohcgs/DRDID
+        - chaisemartinPackages/did_multiplegt
+        - borusyak/did_imputation
+        - lsun20/eventstudyinteract
+        - FixedEffects/FixedEffectModels.jl
+        - jeffgortmaker/pyblp
+        - scunning1975/mixtape
+        - bsvars/bsvars
+        - bsvars/bsvarSIGNs
+      note: report_explicitly_marks_last_update_signals_as_partial_or_unspecified_for_many_repos
+  internal_inconsistencies:
+    - report_section: "### Repo counts by subfield"
+      issue: report_claims_n_equals_20_but_bar_chart_counts_sum_to_21
+    - report_section: "### Summary table of the repos in scope"
+      issue: summary_table_lists_16_repos_not_20
+    - report_section: "## Detailed entries for top candidates"
+      issue: detailed_section_has_15_repo_headings_and_omits_a_dedicated_entry_for_bsvars_bsvarSIGNs
+    - report_section: "### Subfield taxonomy used / ### Summary table of the repos in scope"
+      issue: listed_primary_scopes_include_time_series_and_structural_io_which_are_not_explicit_subfields_in_the_taxonomy_list
+  reconciliation_status:
+    status: unresolved
+    report_declared_shortlist_n: 20
+    report_bar_chart_total: 21
+    report_summary_table_count: 16
+    report_detailed_heading_count: 15
+    canonical_catalog_entry_count: 16
+    canonical_catalog_coverage_note: all_repos_explicitly_listed_in_the_report_summary_table_are_represented_in_entries
+    resolution_policy: preserve_source_values_and_mark_conflicts_explicitly_without_inference
+    next_action: reconcile_counts_in_a_follow_up_metadata_pass_with_versioned_change_log
+
+provenance:
+  strategy: source_line_spans_from_deep_research_report_md
+  section_line_spans:
+    executive_summary: "3-11"
+    methodology: "13-21"
+    subfield_taxonomy: "25-35"
+    subfield_counts: "37-49"
+    recency_buckets: "51-64"
+    summary_table: "66-87"
+    design_guidance: "392-401"
+    limitations_and_maintenance: "403-411"
+  repo_line_spans:
+    bcallaway11/did: "91-118"
+    synth-inference/synthdid: "120-149"
+    grf-labs/grf: "151-178"
+    bashtage/arch: "180-207"
+    bashtage/linearmodels: "209-235"
+    xuyiqing/gsynth: "237-259"
+    rdpackages/rdrobust: "261-274"
+    pedrohcgs/DRDID: "276-287"
+    chaisemartinPackages/did_multiplegt: "289-300"
+    borusyak/did_imputation: "302-313"
+    lsun20/eventstudyinteract: "315-326"
+    FixedEffects/FixedEffectModels.jl: "328-345"
+    jeffgortmaker/pyblp: "347-359"
+    scunning1975/mixtape: "361-372"
+    bsvars/bsvars: "374-390"
+    bsvars/bsvarSIGNs: "87"
+
+entries:
+  - id: bcallaway11_did
+    repo_slug: bcallaway11/did
+    repo_url: https://github.com/bcallaway11/did
+    owner_name: Brantly Callaway
+    owner_affiliation: unspecified
+    primary_scope: DiD multi_period_staggered_adoption
+    primary_language: R
+    last_update_signal: releases_show_latest_did_v2_3_dec_2025_last_commit_date_unspecified
+    stars: "383"
+    forks: "123"
+    watchers: "8"
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts:
+      - DESCRIPTION
+      - NAMESPACE
+      - README.Rmd
+      - README.md
+      - NEWS.md
+      - vignettes/
+      - tests/
+    installation_status: installable_from_cran_and_github_via_devtools_install_github
+    ai_agent_use_cases:
+      - select_estimands_group_time_att_vs_aggregated_dynamic_group
+      - generate_r_templates_for_att_gt_and_aggte
+      - propose_pretrend_and_event_study_diagnostics
+      - map_user_questions_to_package_estimator_options
+    metadata_completeness_note: high_completeness_for_package_surface_but_last_commit_size_and_dependency_enumeration_are_unspecified
+    source_section: "### `bcallaway11/did`"
+
+  - id: synth_inference_synthdid
+    repo_slug: synth-inference/synthdid
+    repo_url: https://github.com/synth-inference/synthdid
+    owner_name: synth_inference_organization_dmitry_arkhangelsky_susan_athey
+    owner_affiliation: CEMFI_and_Stanford_University
+    primary_scope: synthetic_did
+    primary_language: R
+    last_update_signal: commit_history_entries_visible_through_jan_2024
+    stars: "300"
+    forks: "114-115"
+    watchers: unspecified
+    license: BSD-3-Clause
+    recommended_priority: high
+    key_files_artifacts:
+      - DESCRIPTION
+      - vignettes/synthdid.Rmd
+    installation_status: r_package_structure_install_patterns_consistent_with_github_r_packages
+    ai_agent_use_cases:
+      - identify_when_sdid_is_appropriate_for_adoption_structure
+      - generate_minimal_working_examples
+      - guide_function_level_inference_choices
+      - crosswalk_sdid_synthetic_control_and_did_estimands
+    metadata_completeness_note: moderate_completeness_watchers_size_and_commits_in_last_year_unspecified
+    source_section: "### `synth-inference/synthdid`"
+
+  - id: grf_labs_grf
+    repo_slug: grf-labs/grf
+    repo_url: https://github.com/grf-labs/grf
+    owner_name: GRF Labs
+    owner_affiliation: Stanford University
+    primary_scope: ml_econometrics_generalized_random_forests_and_causal_forests
+    primary_language: cplusplus_with_r_interface
+    last_update_signal: updated_mar_4_2026
+    stars: "1.1k"
+    forks: "274"
+    watchers: unspecified
+    license: GPL-3.0
+    recommended_priority: high
+    key_files_artifacts:
+      - vignettes/
+      - R/
+      - package_documentation_pages
+    installation_status: available_on_cran_as_grf_and_backed_by_github_repo
+    ai_agent_use_cases:
+      - route_questions_to_causal_iv_or_quantile_forest_variants
+      - generate_train_predict_diagnose_pipelines
+      - interpret_cate_variable_importance_and_calibration_outputs
+      - provide_reproducible_causal_ml_code_snippets
+    metadata_completeness_note: high_method_and_maintenance_signal_coverage_but_watchers_and_repo_size_unspecified
+    source_section: "### `grf-labs/grf`"
+
+  - id: bashtage_arch
+    repo_slug: bashtage/arch
+    repo_url: https://github.com/bashtage/arch
+    owner_name: Kevin Sheppard
+    owner_affiliation: unspecified
+    primary_scope: time_series_and_financial_econometrics
+    primary_language: Python
+    last_update_signal: pushed_within_days_or_weeks_in_third_party_metadata_absolute_date_unspecified
+    stars: "1,449"
+    forks: "270"
+    watchers: unspecified
+    license: Other_on_pypi_metadata_mirror_confirmation_required
+    recommended_priority: high
+    key_files_artifacts:
+      - public_docs_for_volatility_models
+      - public_docs_for_bootstrapping_and_multiple_comparison_procedures
+      - public_docs_for_unit_root_and_cointegration_tools
+    installation_status: packaged_for_python_installability_supported_by_pypi_indexing_and_docs
+    ai_agent_use_cases:
+      - recommend_and_implement_volatility_models
+      - select_unit_root_and_cointegration_tests
+      - generate_diagnostic_report_templates_for_returns_modeling
+    metadata_completeness_note: strong_scope_signal_but_last_commit_absolute_date_watchers_and_license_status_need_confirmation
+    source_section: "### `bashtage/arch`"
+
+  - id: bashtage_linearmodels
+    repo_slug: bashtage/linearmodels
+    repo_url: https://github.com/bashtage/linearmodels
+    owner_name: Kevin Sheppard
+    owner_affiliation: unspecified
+    primary_scope: general_econometrics_toolkit_panel_and_iv
+    primary_language: Python
+    last_update_signal: pushed_at_10_days_ago_in_listing_context_absolute_date_unspecified
+    stars: "1,006"
+    forks: "185"
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - route_panel_regression_iv_and_clustered_se_requests_to_a_coherent_python_api
+      - generate_example_pipelines
+      - translate_econometrics_notation_to_implementation
+    metadata_completeness_note: partial_metadata_key_files_dependencies_installation_and_license_not_verified_in_run
+    source_section: "### `bashtage/linearmodels`"
+
+  - id: xuyiqing_gsynth
+    repo_slug: xuyiqing/gsynth
+    repo_url: https://github.com/xuyiqing/gsynth
+    owner_name: Yiqing Xu
+    owner_affiliation: unspecified
+    primary_scope: synthetic_control_generalized
+    primary_language: R
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: medium_high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - explain_generalized_synthetic_control_assumptions
+      - recommend_when_generalized_synthetic_control_is_preferred_over_did_or_sdid
+      - generate_scaffolded_r_scripts_after_dependency_confirmation
+    metadata_completeness_note: low_metadata_coverage_follow_up_metadata_pass_required
+    source_section: "### `xuyiqing/gsynth`"
+
+  - id: rdpackages_rdrobust
+    repo_slug: rdpackages/rdrobust
+    repo_url: https://github.com/rdpackages/rdrobust
+    owner_name: rdpackages_organization_matias_d_cattaneo_author_group
+    owner_affiliation: unspecified
+    primary_scope: regression_discontinuity
+    primary_language: unspecified
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - specify_rd_design_objects_running_variable_cutoff_bandwidth_kernel
+      - generate_robust_inference_workflows
+      - produce_rd_diagnostic_checklists
+    metadata_completeness_note: canonical_method_repo_with_most_platform_metadata_unspecified_in_this_run
+    source_section: "### `rdpackages/rdrobust`"
+
+  - id: pedrohcgs_drdid
+    repo_slug: pedrohcgs/DRDID
+    repo_url: https://github.com/pedrohcgs/DRDID
+    owner_name: Pedro H. C. Sant'Anna
+    owner_affiliation: unspecified
+    primary_scope: did_doubly_robust_estimators
+    primary_language: R
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - support_estimator_choice_under_covariate_adjustment_and_model_misspecification
+    metadata_completeness_note: repository_existence_and_scope_confirmed_but_most_operational_metadata_unspecified
+    source_section: "### `pedrohcgs/DRDID`"
+
+  - id: chaisemartinpackages_did_multiplegt
+    repo_slug: chaisemartinPackages/did_multiplegt
+    repo_url: https://github.com/chaisemartinPackages/did_multiplegt
+    owner_name: Clement de Chaisemartin
+    owner_affiliation: unspecified
+    primary_scope: did_multiple_groups_and_time_heterogeneity_robustness
+    primary_language: Stata
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - diagnose_twfe_pitfalls_and_route_to_heterogeneity_robust_alternatives
+    metadata_completeness_note: high_method_relevance_with_sparse_platform_metadata_in_this_run
+    source_section: "### `chaisemartinPackages/did_multiplegt`"
+
+  - id: borusyak_did_imputation
+    repo_slug: borusyak/did_imputation
+    repo_url: https://github.com/borusyak/did_imputation
+    owner_name: Kirill Borusyak
+    owner_affiliation: unspecified
+    primary_scope: did_event_study_imputation_estimator
+    primary_language: Stata
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - implement_modern_did_event_study_workflows_beyond_twfe
+      - index_assumptions_and_setup_requirements_for_imputation_estimation
+    metadata_completeness_note: implementation_scope_confirmed_but_operational_repo_metadata_unspecified
+    source_section: "### `borusyak/did_imputation`"
+
+  - id: lsun20_eventstudyinteract
+    repo_slug: lsun20/eventstudyinteract
+    repo_url: https://github.com/lsun20/eventstudyinteract
+    owner_name: Lingxiao Sun
+    owner_affiliation: unspecified
+    primary_scope: event_study_staggered_did_sun_abraham_approach
+    primary_language: Stata
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - implement_credible_event_study_workflows_for_staggered_adoption
+    metadata_completeness_note: key_method_signal_present_but_repo_operational_metadata_unspecified
+    source_section: "### `lsun20/eventstudyinteract`"
+
+  - id: fixedeffects_fixedeffectmodels_jl
+    repo_slug: FixedEffects/FixedEffectModels.jl
+    repo_url: https://github.com/FixedEffects/FixedEffectModels.jl
+    owner_name: Matthieu Gomez
+    owner_affiliation: unspecified
+    primary_scope: high_dimensional_fixed_effects_and_iv_estimation
+    primary_language: Julia
+    last_update_signal: pushed_about_2_months_ago_in_listing_context_absolute_date_unspecified
+    stars: "235"
+    forks: "46"
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts:
+      - README
+      - license_file_presence_indicated_but_not_extracted
+    installation_status: julia_add_pattern_referenced_in_related_ecosystem_example_direct_repo_install_command_unspecified
+    ai_agent_use_cases:
+      - provide_fast_backends_for_large_panel_many_fixed_effect_and_iv_workloads_in_julia
+    metadata_completeness_note: moderate_metadata_from_listing_context_with_license_watchers_and_direct_install_steps_unspecified
+    source_section: "### `FixedEffects/FixedEffectModels.jl`"
+
+  - id: jeffgortmaker_pyblp
+    repo_slug: jeffgortmaker/pyblp
+    repo_url: https://github.com/jeffgortmaker/pyblp
+    owner_name: Jeffrey Gortmaker
+    owner_affiliation: unspecified
+    primary_scope: structural_io_econometrics_blp
+    primary_language: Python
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - extend_agent_support_from_reduced_form_to_structural_demand_estimation
+    metadata_completeness_note: scope_is_clear_but_package_metadata_and_maintenance_signals_are_unspecified
+    source_section: "### `jeffgortmaker/pyblp`"
+
+  - id: scunning1975_mixtape
+    repo_slug: scunning1975/mixtape
+    repo_url: https://github.com/scunning1975/mixtape
+    owner_name: Scott Cunningham
+    owner_affiliation: unspecified
+    primary_scope: general_causal_inference_and_applied_econometrics_pedagogy
+    primary_language: unspecified
+    last_update_signal: repo_exists_last_update_specifics_unspecified
+    stars: unspecified
+    forks: unspecified
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: medium_high
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - improve_agent_explanations_and_conceptual_indexing_for_causal_workflows
+    metadata_completeness_note: pedagogy_first_resource_with_sparse_platform_metrics_in_this_run
+    source_section: "### `scunning1975/mixtape`"
+
+  - id: bsvars_bsvars
+    repo_slug: bsvars/bsvars
+    repo_url: https://github.com/bsvars/bsvars
+    owner_name: Tomasz Wozniak
+    owner_affiliation: University of Melbourne
+    primary_scope: bayesian_svar_macroeconometrics
+    primary_language: R
+    last_update_signal: repo_exists_and_cran_entry_indicates_package_scope
+    stars: "59"
+    forks: "13"
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: medium
+    key_files_artifacts:
+      - package_style_repository_structure
+      - cran_package_page_for_scope_confirmation
+    installation_status: cran_distribution_exists
+    ai_agent_use_cases:
+      - support_bayesian_macro_agents_for_svar_estimation_workflows
+    metadata_completeness_note: niche_high_value_repo_with_partial_metadata_license_size_and_recent_activity_unspecified
+    source_section: "### `bsvars/bsvars`"
+
+  - id: bsvars_bsvarsigns
+    repo_slug: bsvars/bsvarSIGNs
+    repo_url: https://github.com/bsvars/bsvarSIGNs
+    owner_name: Tomasz Wozniak_plus_collaborators
+    owner_affiliation: unspecified
+    primary_scope: bayesian_svar_with_sign_zero_narrative_restrictions
+    primary_language: cplusplus_with_r_package_interface
+    last_update_signal: repo_docs_mention_award_and_active_issues_through_late_2025
+    stars: "29"
+    forks: "4"
+    watchers: unspecified
+    license: unspecified
+    recommended_priority: medium
+    key_files_artifacts: unspecified
+    installation_status: unspecified
+    ai_agent_use_cases:
+      - support_specialized_bayesian_macro_workflows_with_sign_zero_narrative_identification
+    metadata_completeness_note: listed_in_summary_table_only_without_dedicated_detailed_entry_in_report
+    source_section: "### Summary table of the repos in scope"

@@ -1,0 +1,28 @@
+name: structure-check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check internal references
+        run: platform/scripts/check_internal_refs.sh
+
+      - name: Validate literature catalog
+        run: platform/scripts/validate_literature_catalog.sh
+
+      - name: Stage-gate smoke checks on benchmark runs
+        run: |
+          platform/agents/stage_gate_checks.sh runs/qa/phase6_benchmarks/iv_01
+          platform/agents/stage_gate_checks.sh runs/qa/phase6_benchmarks/rdd_01
+          platform/agents/stage_gate_checks.sh runs/qa/phase6_benchmarks/canonical_did_01
+          platform/agents/stage_gate_checks.sh runs/qa/phase6_benchmarks/staggered_did_01
+          platform/agents/stage_gate_checks.sh runs/qa/phase6_benchmarks/spillovers_01

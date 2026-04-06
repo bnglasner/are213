@@ -1,0 +1,286 @@
+---
+version: 1
+updated_on: '2026-03-23'
+source_catalog: catalog/external_repo_catalog.yaml
+generation_method: derived_from_literal_unspecified_values_in_tracked_fields
+tracked_fields:
+- owner_affiliation
+- primary_language
+- last_update_signal
+- stars
+- forks
+- watchers
+- license
+- key_files_artifacts
+- installation_status
+priority_ordering:
+- high
+- medium_high
+- medium
+- low
+- unspecified
+summary:
+  total_repos: 16
+  repos_with_unspecified_fields: 16
+  repos_without_unspecified_fields: 0
+  total_unspecified_field_instances: 79
+  high_priority_repos_with_unspecified_fields: 12
+  status_counts:
+    pending: 16
+    in_review: 0
+    approved: 0
+    applied: 0
+    blocked: 0
+queue:
+- id: rdpackages_rdrobust
+  repo_slug: rdpackages/rdrobust
+  recommended_priority: high
+  unspecified_field_count: 8
+  unspecified_fields:
+  - owner_affiliation
+  - primary_language
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: borusyak_did_imputation
+  repo_slug: borusyak/did_imputation
+  recommended_priority: high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: chaisemartinpackages_did_multiplegt
+  repo_slug: chaisemartinPackages/did_multiplegt
+  recommended_priority: high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: jeffgortmaker_pyblp
+  repo_slug: jeffgortmaker/pyblp
+  recommended_priority: high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: lsun20_eventstudyinteract
+  repo_slug: lsun20/eventstudyinteract
+  recommended_priority: high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: pedrohcgs_drdid
+  repo_slug: pedrohcgs/DRDID
+  recommended_priority: high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: bashtage_linearmodels
+  repo_slug: bashtage/linearmodels
+  recommended_priority: high
+  unspecified_field_count: 5
+  unspecified_fields:
+  - owner_affiliation
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: fixedeffects_fixedeffectmodels_jl
+  repo_slug: FixedEffects/FixedEffectModels.jl
+  recommended_priority: high
+  unspecified_field_count: 3
+  unspecified_fields:
+  - owner_affiliation
+  - watchers
+  - license
+  partial_signal_field_count: 2
+  partial_signal_fields:
+  - last_update_signal
+  - installation_status
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: bashtage_arch
+  repo_slug: bashtage/arch
+  recommended_priority: high
+  unspecified_field_count: 2
+  unspecified_fields:
+  - owner_affiliation
+  - watchers
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: bcallaway11_did
+  repo_slug: bcallaway11/did
+  recommended_priority: high
+  unspecified_field_count: 2
+  unspecified_fields:
+  - owner_affiliation
+  - license
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: grf_labs_grf
+  repo_slug: grf-labs/grf
+  recommended_priority: high
+  unspecified_field_count: 1
+  unspecified_fields:
+  - watchers
+  partial_signal_field_count: 0
+  partial_signal_fields: []
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: synth_inference_synthdid
+  repo_slug: synth-inference/synthdid
+  recommended_priority: high
+  unspecified_field_count: 1
+  unspecified_fields:
+  - watchers
+  partial_signal_field_count: 0
+  partial_signal_fields: []
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: scunning1975_mixtape
+  repo_slug: scunning1975/mixtape
+  recommended_priority: medium_high
+  unspecified_field_count: 8
+  unspecified_fields:
+  - owner_affiliation
+  - primary_language
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: xuyiqing_gsynth
+  repo_slug: xuyiqing/gsynth
+  recommended_priority: medium_high
+  unspecified_field_count: 7
+  unspecified_fields:
+  - owner_affiliation
+  - stars
+  - forks
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 1
+  partial_signal_fields:
+  - last_update_signal
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: bsvars_bsvarsigns
+  repo_slug: bsvars/bsvarSIGNs
+  recommended_priority: medium
+  unspecified_field_count: 5
+  unspecified_fields:
+  - owner_affiliation
+  - watchers
+  - license
+  - key_files_artifacts
+  - installation_status
+  partial_signal_field_count: 0
+  partial_signal_fields: []
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference
+- id: bsvars_bsvars
+  repo_slug: bsvars/bsvars
+  recommended_priority: medium
+  unspecified_field_count: 2
+  unspecified_fields:
+  - watchers
+  - license
+  partial_signal_field_count: 0
+  partial_signal_fields: []
+  status: pending
+  next_action: perform_follow_up_metadata_pass_from_permitted_sources_and_update_external_repo_catalog
+  notes: generated_from_literal_unspecified_markers_without_inference

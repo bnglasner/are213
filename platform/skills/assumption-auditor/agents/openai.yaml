@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assumption Auditor"
+  short_description: "Audit assumptions and test strategy."
+  default_prompt: "Use $assumption-auditor on <run_dir>/research_brief.yaml and <run_dir>/method_memo.md, then produce <run_dir>/assumption_audit.md."
